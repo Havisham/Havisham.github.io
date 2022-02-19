@@ -1,0 +1,2 @@
+[0617/014024:INFO:http_cache_transaction.cc(72)] IgnoreZeroCacheError: 0
+[0617/020910:WARNING:url_request_job_manager.cc(89)] Failed to map: weixin://resourceid/blank

