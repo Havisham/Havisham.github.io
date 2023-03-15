@@ -27,17 +27,16 @@
 <meta property="og:site_name" content="Havisham&#39;s Blog">
 <meta property="og:description" content="赌书消得泼茶香">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/06/17/images/tcp1.png">
-<meta property="og:image" content="http://example.com/2021/06/17/images/tcp3.jpg">
-<meta property="og:image" content="http://example.com/2021/06/17/images/tcp2.png">
-<meta property="og:image" content="http://example.com/2021/06/17/images/TCP4.png">
-<meta property="og:image" content="http://example.com/2021/06/17/images/tcp5.png">
-<meta property="og:image" content="http://example.com/2021/06/17/images/tcp6.png">
+<meta property="og:image" content="http://example.com/images/tcp3.jpg">
+<meta property="og:image" content="http://example.com/images/tcp2.png">
+<meta property="og:image" content="http://example.com/images/TCP4.png">
+<meta property="og:image" content="http://example.com/images/tcp5.png">
+<meta property="og:image" content="http://example.com/images/tcp6.png">
 <meta property="article:published_time" content="2021-06-16T17:03:42.000Z">
-<meta property="article:modified_time" content="2022-02-19T09:09:57.082Z">
+<meta property="article:modified_time" content="2022-03-06T12:47:01.819Z">
 <meta property="article:author" content="Havisham">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/06/17/images/tcp1.png">
+<meta name="twitter:image" content="http://example.com/images/tcp3.jpg">
 
 <link rel="canonical" href="http://example.com/2021/06/17/%E4%BD%BF%E7%94%A8WireShark%E5%88%86%E6%9E%90TCP-IP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%92%8C%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
 
@@ -198,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-19 17:09:57" itemprop="dateModified" datetime="2022-02-19T17:09:57+08:00">2022-02-19</time>
+                <time title="修改时间：2022-03-06 20:47:01" itemprop="dateModified" datetime="2022-03-06T20:47:01+08:00">2022-03-06</time>
               </span>
 
           
@@ -219,12 +218,15 @@
 <ul>
 <li>注意：为了避免浏览器缓存起作用，最好使用chrome浏览器的incognito隐身模式</li>
 </ul>
-<p>1.开启Wireshark抓包，为了过滤只与此网站有关的数据包，可以使用<code>ping</code>命令获取这个网站对应的ip地址。<br><img src="../images/tcp1.png"><br>使用过滤<code>ipv6.src==2a05:d014:edb:5704::6 or ipv6.dst==2a05:d014:edb:5704::6</code></p>
-<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p><img src="../images/tcp3.jpg"></p>
-<p>由图中可以看到先经过3次TCP传输后才开始HTTP传输<br><img src="../images/tcp2.png"></p>
-<h4 id="第一次握手"><a href="#第一次握手" class="headerlink" title="第一次握手"></a>第一次握手</h4><p>客户主机发起连接请求，设置SYN标志位为1，同时客户端随机选择了一个初始序号<code>seq=x</code><br><img src="../images/TCP4.png"></p>
-<h4 id="第二次握手"><a href="#第二次握手" class="headerlink" title="第二次握手"></a>第二次握手</h4><p>服务端会返回一个<code>SYNACK</code>报文到客户端，其中SYN标志位为1，设置确认号<code>ack=x+1</code>，并且选一个自己的初始序号<code>seq=y</code><br><img src="../images/tcp5.png"></p>
-<h4 id="第三次握手"><a href="#第三次握手" class="headerlink" title="第三次握手"></a>第三次握手</h4><p>当收到服务器发来的<code>SYNACK</code>报文段后，客户端需要给该连接分配缓存和变量，然后再次发送一个<code>ACK</code>确认报文给服务端，其中，SYN标志位设置为0，确认号<code>ack=y+1</code>，自己的序号<code>seq=x+1</code><br><img src="../images/tcp6.png"></p>
+<p>1.开启Wireshark抓包，为了过滤只与此网站有关的数据包，可以使用<code>ping</code>命令获取这个网站对应的ip地址。</p>
+<!-- ![](../images/tcp1.png) -->
+
+<p>使用过滤<code>ipv6.src==2a05:d014:edb:5704::6 or ipv6.dst==2a05:d014:edb:5704::6</code></p>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p><img src="/../images/tcp3.jpg"></p>
+<p>由图中可以看到先经过3次TCP传输后才开始HTTP传输<br><img src="/../images/tcp2.png"></p>
+<h4 id="第一次握手"><a href="#第一次握手" class="headerlink" title="第一次握手"></a>第一次握手</h4><p>客户主机发起连接请求，设置SYN标志位为1，同时客户端随机选择了一个初始序号<code>seq=x</code><br><img src="/../images/TCP4.png"></p>
+<h4 id="第二次握手"><a href="#第二次握手" class="headerlink" title="第二次握手"></a>第二次握手</h4><p>服务端会返回一个<code>SYNACK</code>报文到客户端，其中SYN标志位为1，设置确认号<code>ack=x+1</code>，并且选一个自己的初始序号<code>seq=y</code><br><img src="/../images/tcp5.png"></p>
+<h4 id="第三次握手"><a href="#第三次握手" class="headerlink" title="第三次握手"></a>第三次握手</h4><p>当收到服务器发来的<code>SYNACK</code>报文段后，客户端需要给该连接分配缓存和变量，然后再次发送一个<code>ACK</code>确认报文给服务端，其中，SYN标志位设置为0，确认号<code>ack=y+1</code>，自己的序号<code>seq=x+1</code><br><img src="/../images/tcp6.png"></p>
 
     </div>
 
@@ -350,7 +352,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-candy-cane"></i>
   </span>
